@@ -21,7 +21,7 @@
 
         $scope.init = function () {
 
-            MovieSrv.getMovies().then(function (response) {
+            MovieSrv.getMovies($scope.page).then(function (response) {
                 getMovieDetails(response.results);
             });
 
@@ -34,7 +34,6 @@
 
         $scope.search = function () {
             MovieSrv.search($scope.searchFrm.text, $scope.searchFrm.page, $scope.searchFrm.year).then(function (response) {
-                // $scope.movies = response.results;
                 getMovieDetails(response.results);
             });
         };
@@ -53,7 +52,7 @@
                 item.type = "m"; //movie
                 item.info1 = appConfig.timeFormat(response.runtime);
                 var country = response.production_countries.length > 0? "(" + response.production_countries[0].name + ")" : "";
-                item.info2 = $filter('date')(response.release_date,'d MMM y') + " (" + country ;
+                item.info2 = $filter('date')(response.release_date,'d MMM y') + " " + country ;
                 item.info3 = appConfig.genresInfo(response.genres);
                 $scope.movies.push(item);
             });
@@ -65,6 +64,20 @@
                 $scope.getMovie(movie);
             });
         };
+
+
+        $scope.nextPage = function () {
+
+            $scope.page += 1;
+
+            if($scope.searchFrm.text.toString().trim() == ""){
+                MovieSrv.getMovies($scope.page).then(function (response) {
+                    getMovieDetails(response);
+                });
+            }
+
+        }
+
 
     }]);
 })();

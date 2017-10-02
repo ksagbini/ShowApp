@@ -1,0 +1,15 @@
+<div class="modal" ng-show="show">
+
+    <a class="modal-btn-close" ng-click="show = false">
+        <i class="fa fa-close"></i>
+    </a>
+
+    <div class="modal-content">
+        <ng-youtube-embed
+                height="300"
+                video="modalurl"
+                autoplay="false"
+                disablekb="true">
+        </ng-youtube-embed>
+    </div>
+</div>

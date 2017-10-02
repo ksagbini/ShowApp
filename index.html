@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShowApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title ng-bind="$root.title + ' | ShowApp'">ShowApp</title>
+
+
+
+    <link href="assets/css/style.css" rel="stylesheet" media="all" type="text/css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+
+    <base href="http://localhost/Showapp/">
+
+</head>
+<body>
+
+
+<header class="content header">
+    <h1>
+        <a href="#">ShowApp</a>
+    </h1>
+    <nav>
+        <ul>
+            <li><a ng-class="$root.active == 'moviesPage' ? 'active' : ''" ng-href="#!/movies">Movies</a></li>
+            <li><a ng-class="$root.active == 'seriesPage' ? 'active' : ''" ng-href="#!/series">Series</a></li>
+            <li><a ng-class="$root.active == 'favsPage' ? 'active' : ''" ng-href="#!/fav">Fav</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+
+<section ng-view></section>
+
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/angular-route/angular-route.min.js"></script>
+<script src="node_modules/ngstorage/ngStorage.min.js"></script>
+<script src="node_modules/ng-youtube-embed/src/ng-youtube-embed.js"></script>
+
+<script src="app/app.js"></script>
+<script src="app/app.config.js"></script>
+
+<script src="app/Movie/movie.ctrl.js"></script>
+<script src="app/Movie/movie.srv.js"></script>
+
+<script src="app/Serie/serie.ctrl.js"></script>
+<script src="app/Serie/serie.srv.js"></script>
+
+<script src="app/Fav/fav.ctrl.js"></script>
+
+
+<script src="app/Components/card.dtv.js"></script>
+<script src="app/Components/modal.dtv.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,412 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+  color: #687B82;
+}
+* {
+  font-size: 16px;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+input:not([type="checkbox"]),
+select {
+  vertical-align: middle;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+input:not([type="checkbox"])[type="checkbox"],
+select[type="checkbox"] {
+  -webkit-appearance: ckeckbox!important;
+}
+input:not([type="checkbox"])[type="radio"],
+select[type="radio"] {
+  -webkit-appearance: radio!important;
+}
+h1 {
+  font-size: 2.5em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.5em;
+}
+h4 {
+  font-size: 1.3em;
+}
+body {
+  font-family: Helvetica;
+}
+.content {
+  margin: 0 auto;
+  width: 95%;
+}
+.section-title {
+  font-size: 16px;
+}
+.header {
+  display: block;
+  overflow: hidden;
+  padding: 20px 0;
+  vertical-align: top;
+}
+.header h1 {
+  display: inline-block;
+  float: left;
+}
+.header h1 a {
+  display: block;
+  width: 150px;
+  background: url("../img/logo.png") center center no-repeat;
+  background-size: contain;
+  text-indent: -9999px;
+}
+.header nav {
+  display: inline-block;
+  float: right;
+}
+.header nav ul {
+  overflow: auto;
+}
+.header nav ul li {
+  display: inline-block;
+  float: left;
+}
+.header nav ul li a {
+  display: block;
+  padding: 5px;
+  border-bottom: 2px solid transparent;
+}
+.header nav ul li a:hover,
+.header nav ul li a.active {
+  color: #0ABFFE;
+  border-bottom-color: #0ABFFE;
+}
+@media only screen and (min-width: 200px) and (max-width: 768px) {
+  .header nav {
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+  }
+}
+.search-bar {
+  background-color: #F3F6F7;
+  display: block;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  vertical-align: top;
+}
+.search-bar input {
+  display: inline-block;
+  background-color: transparent;
+  width: calc(95% - 30px);
+  font-style: italic;
+  color: #687B82;
+}
+.search-bar button {
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  color: #687B82;
+}
+.card {
+  display: inline-block;
+  position: relative;
+  border: 1px solid #979797;
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(130, 130, 130, 0.5);
+  -moz-box-shadow: 0px 0px 10px 2px rgba(130, 130, 130, 0.5);
+  box-shadow: 0px 0px 10px 2px rgba(130, 130, 130, 0.5);
+  vertical-align: top;
+  width: calc(50% - 2px - 20px);
+  margin: 0 20px 20px 0;
+}
+@media only screen and (min-width: 200px) and (max-width: 768px) {
+  .card {
+    overflow: hidden;
+    display: block;
+    width: calc(100% - 2px);
+    marginm: 0 0 20px 0;
+    clear: both;
+  }
+}
+.card-img {
+  display: inline-block;
+  float: left;
+  width: 25%;
+  min-height: 180px;
+}
+.card-info {
+  position: relative;
+  display: inline-block;
+  float: left;
+  width: calc(75% - 40px);
+  padding: 20px;
+}
+.card-info h3 {
+  font-size: 14px;
+  position: relative;
+}
+.card-info h3 span {
+  position: absolute;
+  right: 0;
+}
+.card-info ul {
+  padding: 10px 0;
+  overflow: hidden;
+}
+.card-info ul li {
+  display: inline-block;
+  float: left;
+  border-right: 1px solid #3D484C;
+  font-size: 11px;
+  text-align: center;
+  width: calc(33% - 1px);
+}
+.card-info ul li:last-child {
+  border: none;
+}
+.card-info p {
+  font-size: 12px;
+  line-height: 1.3em;
+}
+.card-btn {
+  display: block;
+  width: calc(100% - 35%);
+  overflow: hidden;
+  position: absolute;
+  bottom: 20px;
+  left: 30%;
+  vertical-align: top;
+}
+.btn,
+.fav-btn {
+  display: inline-block;
+  padding: 5px;
+  font-size: 11px;
+  cursor: pointer;
+}
+.btn {
+  border: 1px solid #00BDFF;
+  color: #00BDFF;
+  background-color: transparent;
+  border-radius: 5px;
+  text-align: center;
+}
+.btn:hover {
+  background-color: #00BDFF;
+  color: #fff;
+}
+.fav-btn {
+  float: right;
+  color: #3D484C;
+}
+.fav-btn:hover i,
+.fav-btn .fav-btn-active i {
+  color: red;
+}
+.filter-form {
+  display: block;
+  margin: 20px 0;
+  overflow: hidden;
+}
+.filter-form div {
+  display: inline-block;
+  width: 30%;
+  margin-right: 10px;
+}
+.filter-form div label {
+  font-size: 11px;
+  display: block;
+  margin-bottom: 5px;
+}
+.filter-form div select {
+  width: calc(100% - 22px);
+  border-radius: 0;
+  border: 1px solid #E8EEF1;
+  padding: 10px;
+}
+@media only screen and (min-width: 200px) and (max-width: 768px) {
+  .filter-form div {
+    display: block;
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+  background-color: #F3F6F7;
+  margin: 10% auto;
+  display: block;
+  max-width: 500px;
+  height: 300px;
+}
+.modal-btn-close {
+  display: block;
+  position: absolute;
+  font-size: 30px;
+  top: 20px;
+  right: 20px;
+  color: #F3F6F7;
+  cursor: pointer;
+}

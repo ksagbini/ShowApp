@@ -1,0 +1,30 @@
+<div class="result-list">
+    <p ng-show="datalist.length == 0">Sorry no movies were found related to these criterias</p>
+    <ul ng-hide="datalist.length == 0">
+
+
+        <li ng-repeat="item in datalist" class="card">
+            <div class="card-img">
+                <img ng-src="{{item.img}}" src="" alt="{{item.title}}" width="100%">
+            </div>
+            <div class="card-info">
+                <h3>
+                    {{item.title}}
+                    <span>{{item.vote_average}}</span>
+                </h3>
+                <ul>
+                    <li>{{item.info1}}</li>
+                    <li>{{item.info2}}</li>
+                    <li>{{item.info3}}</li>
+                </ul>
+                <p>{{item.overview}}</p>
+            </div>
+            <div class="card-btn">
+                <a class="btn" ng-click="showTrailer(item)">Ver trailer</a>
+                <a class="fav-btn" ng-click="saveToFav(item)" ng-hide="item.favHide">Agregar a favorito <i class="fa fa-heart"></i></a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<modal modalurl="trailer.url" show="trailer.show"></modal>

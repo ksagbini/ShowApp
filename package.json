@@ -1,7 +1,7 @@
 {
   "name": "showapp",
   "version": "1.0.0",
-  "description": "",
+  "description": "Showapp Movie and Series web application using The Movie Database API",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,5 +17,14 @@
     "less-css": "^0.1.4",
     "ng-youtube-embed": "^1.7.11",
     "ngstorage": "^0.3.11"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksagbini/ShowApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksagbini/ShowApp/issues"
+  },
+  "homepage": "https://github.com/ksagbini/ShowApp#readme"
 }

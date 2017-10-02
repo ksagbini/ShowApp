@@ -12,7 +12,7 @@
             <label for="cbxYear">Year</label>
             <select name="cbxYear" id="cbxYear"
                     ng-model="searchFrm.year"
-                    ng-options="year for year in years | orderBy: '-' track by year">
+                    ng-options="year for year in years | orderBy: '-' track by year" >
             </select>
 
         </div>
@@ -24,34 +24,6 @@
             </select>
         </div>
     </div>
-
-    <!--<div class="result-list">-->
-        <!--<p ng-show="movies.length == 0">Sorry no movies were found related to these criterias</p>-->
-        <!--<ul ng-hide="movies.length == 0">-->
-            <!--<li ng-repeat="movie in movies" class="card">-->
-                <!--<div class="card-img">-->
-                    <!--<img ng-src="{{apiImageUrl + movie.poster_path}}" src="" alt="{{movie.original_title}}" width="100%">-->
-                <!--</div>-->
-                <!--<div class="card-info">-->
-                    <!--<h3>-->
-                        <!--{{movie.original_title}}-->
-                        <!--<span>{{movie.vote_average}}</span>-->
-                    <!--</h3>-->
-                    <!--<ul>-->
-                        <!--<li>{{movie.runtime}}</li>-->
-                        <!--<li>{{movie.release_date | date: "d MMM y"}}</li>-->
-                        <!--<li><em ng-repeat="genre in movie.genres">{{genre.name}} </em></li>-->
-                    <!--</ul>-->
-                    <!--<p>{{movie.overview}}</p>-->
-                <!--</div>-->
-                <!--<div class="card-btn">-->
-                    <!--<a class="btn" ng-click="getVideo(movie.id)">Ver trailer</a>-->
-                    <!--<a class="fav-btn">Agregar a favorito <i class="fa fa-heart"></i></a>-->
-                <!--</div>-->
-            <!--</li>-->
-        <!--</ul>-->
-    <!--</div>-->
-
 
 
     <card datalist="movies"></card>

@@ -8,8 +8,8 @@
 
         var srv = {};
 
-        srv.getMovies = function () {
-            return $http.get(appConfig.apiUrl + "discover/movie", {params: {api_key: appConfig.apiKey}}).then(function (response) {
+        srv.getMovies = function (page) {
+            return $http.get(appConfig.apiUrl + "discover/movie", {params: {api_key: appConfig.apiKey, page: page}}).then(function (response) {
                 return response.data;
             });
         };

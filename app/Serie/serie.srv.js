@@ -9,8 +9,8 @@
 
         var srv = {};
 
-        srv.getSeries = function () {
-            return $http.get(appConfig.apiUrl + "discover/tv", {params: {api_key: appConfig.apiKey}}).then(function (response) {
+        srv.getSeries = function (page) {
+            return $http.get(appConfig.apiUrl + "discover/tv", {params: {api_key: appConfig.apiKey, page: page}}).then(function (response) {
                 return response.data;
             });
         };
